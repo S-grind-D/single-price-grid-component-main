@@ -60,7 +60,7 @@ h1 {
   width: 70%;
   max-width: 650px;
   margin: 0 auto;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
   box-shadow: #8da8bd9a 0px 8px 30px;
 }
 
@@ -76,7 +76,7 @@ h1 {
 
 .card__lower--right {
   background-color: hsla(179, 62%, 43%, 0.931);
-  border-radius: 0 0 0.7rem 0.7rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -143,10 +143,10 @@ h1 {
   }
 
   .card__lower--right {
-    border-radius: 0 0 0.7rem 0;
+    border-radius: 0 0 0.5rem 0;
   }
 
   .card__lower--left {
-    border-radius: 0 0 0 0.7rem;
+    border-radius: 0 0 0 0.5rem;
   }
 }
