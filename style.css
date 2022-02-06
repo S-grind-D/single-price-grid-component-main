@@ -1,152 +1,138 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* border-box */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-:root {
-  font-size: 100%;
+/* Reset margin & padding */
+body,
+span,
+br,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Karla", sans-serif;
-  font-weight: 400;
-  color: #fff;
+/* IMG easier to work with */
+img {
+    display: block;
+    width: 22%;
 }
 
-.bg {
-  background-color: #e6eff6;
-  min-height: 95vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0;
-}
-
-.container {
-  width: 85%;
-  padding: 1.7rem;
+body{
+    background-color: hsl(0, 0%, 98%);
+    padding-top: 3.5rem;
 }
 
 h1 {
-  margin: 0.8rem 0;
-  margin-bottom: 1.5rem;
-}
-.card__title {
-  color: hsl(179, 62%, 43%);
-  font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
-.card__offer {
-  color: hsl(71, 73%, 54%);
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+h1, h2, p {
+    font-family: Poppins;
+}
+.title, h2 {
+    font-weight: 600;
+}
+.regular {
+    font-weight: 200;
+}
+p {
+    font-weight: 400;
+    font-size: 15px;
+    color: hsl(231, 3%, 53%);
 }
 
-.card__description {
-  color: hsl(218, 22%, 67%);
-  opacity: 0.8;
-  font-size: 0.93rem;
-  line-height: 1.6rem;
-  margin: 0;
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:hsl(234, 12%, 34%);
+    margin-bottom: 3rem;;
+}
+
+h1 + h1{
+    margin-bottom: 1rem;
+}
+
+.title p {
+    max-width: 45ch;
+}
+
+.card--container {    
+    margin: 0 auto;
 }
 
 .card {
-  background-color: #fff;
-  width: 70%;
-  max-width: 650px;
-  margin: 0 auto;
-  border-radius: 0.5rem;
-  box-shadow: #8da8bd9a 0px 8px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1.5rem;
+    width: 17.5rem;
+    box-shadow: hsla(234, 27%, 44%, 0.26) 0px 7px 12px 2px;
 }
 
-.card__upper {
-  width: 100%;
-  padding-bottom: 2rem;
+.card:nth-of-type(1) {
+    border-top: 4px solid hsl(180, 62%, 55%);
 }
 
-.card__lower--left {
-  background-color: hsl(179, 62%, 43%);
-  width: 100%;
+.middle .card:nth-of-type(1) {
+    border-top: 4px solid hsl(0, 78%, 62%);
 }
 
-.card__lower--right {
-  background-color: hsla(179, 62%, 43%, 0.931);
-  border-radius: 0 0 0.5rem 0.5rem;
-  width: 100%;
+.middle .card:nth-of-type(2) {
+    border-top: 4px solid hsl(34, 97%, 64%);
 }
 
-.card__lower--title {
-  font-size: 1.2rem;
-  margin-top: 0.6rem;
+.card:last-of-type {
+    border-top: 4px solid hsl(212, 86%, 64%);
 }
 
-.card__lower--price {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card__lower--price p {
-  margin: 0;
-}
-
-.card__lower--left > p {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  color: hsl(204, 43%, 93%);
-}
-
-.card__lower--price-frequency {
-  font-size: 1rem;
-  color: hsl(204, 43%, 93%);
-  opacity: 0.7;
-  font-weight: 400;
-  margin-left: 0.5rem;
-  position: relative;
-  bottom: 0.3rem;
-}
-
-.card__button {
-  background-color: hsl(71, 73%, 54%);
-  color: hsl(66, 100%, 75%);
-  outline: none;
-  border: none;
-  padding: 0.7rem 0;
-  font-size: 0.8rem;
-  font-weight: bold;
-  width: 100%;
-  border-radius: 5px;
-  box-shadow: hsla(0, 0%, 21%, 0.363) 0px 6px 20px;
-}
-
-.card__lower--list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 1.3rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-@media (min-width: 600px) {
-  :root {
-    font-size: 110%;
-  }
-
-  .card__lower {
+.flex-col {
     display: flex;
-  }
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
-  .card__lower--right {
-    border-radius: 0 0 0.5rem 0;
-  }
+img {
+    margin-top: 2rem;
+    margin-left: auto;
+}
 
-  .card__lower--left {
-    border-radius: 0 0 0 0.5rem;
-  }
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+.card p {
+    font-size: .75rem;
+    color: hsl(229, 6%, 66%);
+}
+footer {
+    margin-top: 3rem;
+    /* position: fixed; */
+}
+
+@media (min-width: 1440px) {
+    .flex {
+        flex-direction: row;
+    }
 }
